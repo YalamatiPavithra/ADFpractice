@@ -1,0 +1,108 @@
+{
+	"name": "SourceDataset_k5j",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "hepatitis_data.csv",
+				"container": "blobcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "target",
+				"type": "String"
+			},
+			{
+				"name": "age",
+				"type": "String"
+			},
+			{
+				"name": "gender",
+				"type": "String"
+			},
+			{
+				"name": "steroid",
+				"type": "String"
+			},
+			{
+				"name": "antivirals",
+				"type": "String"
+			},
+			{
+				"name": "fatigue",
+				"type": "String"
+			},
+			{
+				"name": "malaise",
+				"type": "String"
+			},
+			{
+				"name": "anorexia",
+				"type": "String"
+			},
+			{
+				"name": "liverBig",
+				"type": "String"
+			},
+			{
+				"name": "liverFirm",
+				"type": "String"
+			},
+			{
+				"name": "spleen",
+				"type": "String"
+			},
+			{
+				"name": "spiders",
+				"type": "String"
+			},
+			{
+				"name": "ascites",
+				"type": "String"
+			},
+			{
+				"name": "varices",
+				"type": "String"
+			},
+			{
+				"name": "bili",
+				"type": "String"
+			},
+			{
+				"name": "alk",
+				"type": "String"
+			},
+			{
+				"name": "sgot",
+				"type": "String"
+			},
+			{
+				"name": "albu",
+				"type": "String"
+			},
+			{
+				"name": "protime",
+				"type": "String"
+			},
+			{
+				"name": "histology",
+				"type": "String"
+			}
+		]
+	}
+}
