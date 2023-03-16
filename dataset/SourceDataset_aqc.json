@@ -1,0 +1,116 @@
+{
+	"name": "SourceDataset_aqc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "BackOrders.csv",
+				"container": "blobcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "sku",
+				"type": "String"
+			},
+			{
+				"name": "national_inv",
+				"type": "String"
+			},
+			{
+				"name": "lead_time",
+				"type": "String"
+			},
+			{
+				"name": "in_transit_qty",
+				"type": "String"
+			},
+			{
+				"name": "forecast_3_month",
+				"type": "String"
+			},
+			{
+				"name": "forecast_6_month",
+				"type": "String"
+			},
+			{
+				"name": "forecast_9_month",
+				"type": "String"
+			},
+			{
+				"name": "sales_1_month",
+				"type": "String"
+			},
+			{
+				"name": "sales_3_month",
+				"type": "String"
+			},
+			{
+				"name": "sales_6_month",
+				"type": "String"
+			},
+			{
+				"name": "sales_9_month",
+				"type": "String"
+			},
+			{
+				"name": "min_bank",
+				"type": "String"
+			},
+			{
+				"name": "potential_issue",
+				"type": "String"
+			},
+			{
+				"name": "pieces_past_due",
+				"type": "String"
+			},
+			{
+				"name": "perf_6_month_avg",
+				"type": "String"
+			},
+			{
+				"name": "perf_12_month_avg",
+				"type": "String"
+			},
+			{
+				"name": "local_bo_qty",
+				"type": "String"
+			},
+			{
+				"name": "deck_risk",
+				"type": "String"
+			},
+			{
+				"name": "oe_constraint",
+				"type": "String"
+			},
+			{
+				"name": "ppap_risk",
+				"type": "String"
+			},
+			{
+				"name": "stop_auto_buy",
+				"type": "String"
+			},
+			{
+				"name": "rev_stop",
+				"type": "String"
+			},
+			{
+				"name": "went_on_backorder",
+				"type": "String"
+			}
+		]
+	}
+}
