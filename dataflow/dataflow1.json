@@ -1,0 +1,60 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "SourceDataset_aqc",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "filter1"
+				},
+				{
+					"name": "sort1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          sku as string,",
+				"          national_inv as string,",
+				"          lead_time as string,",
+				"          in_transit_qty as string,",
+				"          forecast_3_month as string,",
+				"          forecast_6_month as string,",
+				"          forecast_9_month as string,",
+				"          sales_1_month as string,",
+				"          sales_3_month as string,",
+				"          sales_6_month as string,",
+				"          sales_9_month as string,",
+				"          min_bank as string,",
+				"          potential_issue as string,",
+				"          pieces_past_due as string,",
+				"          perf_6_month_avg as string,",
+				"          perf_12_month_avg as string,",
+				"          local_bo_qty as string,",
+				"          deck_risk as string,",
+				"          oe_constraint as string,",
+				"          ppap_risk as string,",
+				"          stop_auto_buy as string,",
+				"          rev_stop as string,",
+				"          went_on_backorder as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     inferDriftedColumnTypes: true,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 filter(toBoolean(deck_risk)== true()\r",
+				") ~> filter1",
+				"source1 sort(asc(national_inv, true)) ~> sort1"
+			]
+		}
+	}
+}
