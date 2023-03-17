@@ -1,0 +1,52 @@
+{
+	"name": "DelimitedText2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Covid19 India.csv",
+				"container": "inputblob"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Sno",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "State/UnionTerritory",
+				"type": "String"
+			},
+			{
+				"name": "ConfirmedIndianNational",
+				"type": "String"
+			},
+			{
+				"name": "ConfirmedForeignNational",
+				"type": "String"
+			},
+			{
+				"name": "Cured",
+				"type": "String"
+			},
+			{
+				"name": "Deaths",
+				"type": "String"
+			}
+		]
+	}
+}
